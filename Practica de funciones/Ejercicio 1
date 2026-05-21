@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+float POTEN(float x, int y)
+{
+    float pot = 1;
+
+    for(int i = 1; i <= y; i++)
+    {
+        pot = pot * x;
+    }
+
+    return pot;
+}
+
+int main()
+{
+    float x;
+    int y;
+
+    cout << "Ingrese la base: ";
+    cin >> x;
+
+    cout << "Ingrese el exponente: ";
+    cin >> y;
+
+    cout << "Resultado: " << POTEN(x, y);
+
+    return 0;
+}
