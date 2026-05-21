@@ -1,0 +1,21 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+float redondear(float numero, int n)
+{
+    float factor;
+    factor = pow(10, n);
+    numero = round(numero * factor) / factor;
+    return numero;
+}
+int main()
+{
+    float numero;
+    int n;
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+    cout << "Ingrese cantidad de decimales: ";
+    cin >> n;
+    cout << "Resultado: " << redondear(numero, n);
+    return 0;
+}
