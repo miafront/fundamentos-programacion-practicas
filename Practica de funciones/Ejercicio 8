@@ -1,0 +1,38 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+void ecuacion(float a, float b, float c)
+{
+    float d, x1, x2, real, imaginaria;
+    d = (b * b) - (4 * a * c);
+    if(d > 0)
+    {
+        x1 = (-b + sqrt(d)) / (2 * a);
+        x2 = (-b - sqrt(d)) / (2 * a);
+        cout << "Dos raices reales" << endl;
+        cout << "X1 = " << x1 << endl;
+        cout << "X2 = " << x2 << endl;
+    }
+    else if(d == 0)
+    {
+        x1 = -b / (2 * a);
+        cout << "Raiz doble" << endl;
+        cout << "X = " << x1 << endl;
+    }
+    else
+    {
+        real = -b / (2 * a);
+        imaginaria = sqrt(-d) / (2 * a);
+        cout << "Raices complejas" << endl;
+        cout << "X1 = " << real << " + " << imaginaria << "i" << endl;
+        cout << "X2 = " << real << " - " << imaginaria << "i" << endl;
+    }
+}
+int main()
+{
+    float a, b, c;
+    cout << "Ingrese a, b y c: ";
+    cin >> a >> b >> c;
+    ecuacion(a, b, c);
+    return 0;
+}
