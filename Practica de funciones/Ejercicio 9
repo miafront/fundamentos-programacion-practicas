@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int convertir(int binario)
+{
+    int decimal = 0;
+    int base = 1;
+    int digito;
+    while(binario > 0)
+    {
+        digito = binario % 10;
+        decimal = decimal + digito * base;
+        base = base * 2;
+        binario = binario / 10;
+    }
+
+    return decimal;
+}
+int main()
+{
+    int binario;
+    cout << "Ingrese un numero binario: ";
+    cin >> binario;
+    cout << "Decimal: " << convertir(binario);
+    return 0;
+}
