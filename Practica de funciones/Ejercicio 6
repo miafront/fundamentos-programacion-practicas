@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+void sistema(float A, float B, float C,
+             float D, float E, float F,
+             float &x, float &y)
+{
+    float divisor;
+    divisor = (A * E) - (B * D);
+    x = ((B * F) - (C * E)) / divisor;
+    y = ((C * D) - (A * F)) / divisor;
+}
+int main()
+{
+    float A, B, C, D, E, F;
+    float x, y;
+    cout << "Ingrese A, B y C: ";
+    cin >> A >> B >> C;
+    cout << "Ingrese D, E y F: ";
+    cin >> D >> E >> F;
+    sistema(A, B, C, D, E, F, x, y);
+    cout << "X = " << x << endl;
+    cout << "Y = " << y << endl;
+    return 0;
+}
