@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+void literal(int n)
+{
+    if(n >= 1000)
+    {
+        if(n / 1000 == 1)
+            cout << "un mil ";
+        else if(n / 1000 == 2)
+            cout << "dos mil ";
+        else if(n / 1000 == 3)
+            cout << "tres mil ";
+        n = n % 1000;
+    }
+    if(n >= 100)
+    {
+        if(n / 100 == 1)
+            cout << "cien ";
+        else if(n / 100 == 2)
+            cout << "doscientos ";
+        else if(n / 100 == 3)
+            cout << "trescientos ";
+        else if(n / 100 == 4)
+            cout << "cuatrocientos ";
+        else if(n / 100 == 5)
+            cout << "quinientos ";
+        n = n % 100;
+    }
+    if(n >= 10)
+    {
+        if(n >= 10 && n < 20)
+        {
+            if(n == 10) cout << "diez ";
+            if(n == 11) cout << "once ";
+            if(n == 12) cout << "doce ";
+            if(n == 13) cout << "trece ";
+            if(n == 14) cout << "catorce ";
+            if(n == 15) cout << "quince ";
+        }
+        else
+        {
+            if(n / 10 == 2) cout << "veinte ";
+            if(n / 10 == 3) cout << "treinta ";
+            if(n / 10 == 4) cout << "cuarenta ";
+            if(n / 10 == 5) cout << "cincuenta ";
+        }
+        n = n % 10;
+    }
+    if(n >= 1)
+    {
+        if(n == 1) cout << "uno ";
+        if(n == 2) cout << "dos ";
+        if(n == 3) cout << "tres ";
+        if(n == 4) cout << "cuatro ";
+        if(n == 5) cout << "cinco ";
+        if(n == 6) cout << "seis ";
+        if(n == 7) cout << "siete ";
+        if(n == 8) cout << "ocho ";
+        if(n == 9) cout << "nueve ";
+    }
+}
+int main()
+{
+    float numero;
+    int entero, decimal;
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+    entero = numero;
+    decimal = (numero - entero) * 100;
+    literal(entero);
+    cout << decimal << "/100 bolivianos";
+    return 0;
+}
