@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int potencia(int x, int y)
+{
+    int resultado = 1;
+    for(int i = 1; i <= y; i++)
+    {
+        resultado = resultado * x;
+    }
+    return resultado;
+}
+int factorial(int n)
+{
+    int resultado = 1;
+    for(int i = 1; i <= n; i++)
+    {
+        resultado = resultado * i;
+    }
+    return resultado;
+}
+int main()
+{
+    int x, n;
+    float suma = 0;
+    cout << "Ingrese X: ";
+    cin >> x;
+    cout << "Ingrese N: ";
+    cin >> n;
+    for(int i = 1; i <= n; i++)
+    {
+        suma = suma + (float)potencia(x, i) / factorial(i);
+    }
+    cout << "La suma es: " << suma;
+    return 0;
+}
