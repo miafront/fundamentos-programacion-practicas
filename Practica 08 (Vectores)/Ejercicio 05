@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+bool capicua(int v[],int n){
+for(int i=0;i<n/2;i++){
+if(v[i]!=v[n-1-i])
+return false;
+}
+return true;
+}
+int main(){
+int n,v[100];
+cin>>n;
+for(int i=0;i<n;i++)
+cin>>v[i];
+if(capicua(v,n))
+cout<<"Es capicua";
+else
+cout<<"No es capicua";
+return 0;
+}
