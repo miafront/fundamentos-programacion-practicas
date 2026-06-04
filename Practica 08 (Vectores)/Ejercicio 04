@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+void revertir(int v[],int r[],int n){
+for(int i=0;i<n;i++)
+r[i]=v[n-1-i];
+}
+int main(){
+int n,v[100],r[100];
+cin>>n;
+for(int i=0;i<n;i++)
+cin>>v[i];
+revertir(v,r,n);
+for(int i=0;i<n;i++)
+cout<<r[i]<<" ";
+return 0;
+}
