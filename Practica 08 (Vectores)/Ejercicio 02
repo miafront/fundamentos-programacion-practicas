@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int minimo(int v[],int n){
+int menor=v[0];
+for(int i=1;i<n;i++)
+if(v[i]<menor)
+menor=v[i];
+return menor;
+}
+int main(){
+int n,v[100];
+cin>>n;
+for(int i=0;i<n;i++)
+cin>>v[i];
+cout<<minimo(v,n);
+return 0;
+}
