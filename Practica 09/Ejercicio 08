@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+int n;
+string palabra,frase="";
+cin>>n;
+for(int i=0;i<n;i++){
+cin>>palabra;
+frase.append(palabra);
+if(i<n-1)
+frase.append(" ");
+}
+cout<<frase;
+return 0;
+}
