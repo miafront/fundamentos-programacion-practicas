@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string codifica(string texto,int n){
+for(int i=0;i<texto.length();i++){
+if(texto.at(i)>='a' && texto.at(i)<='z'){
+texto.at(i)=texto.at(i)+n;
+if(texto.at(i)>'z')
+texto.at(i)=texto.at(i)-26;
+}
+if(texto.at(i)>='A' && texto.at(i)<='Z'){
+texto.at(i)=texto.at(i)+n;
+if(texto.at(i)>'Z')
+texto.at(i)=texto.at(i)-26;
+}
+}
+return texto;
+}
+int main(){
+string texto;
+int n;
+getline(cin,texto);
+cin>>n;
+cout<<codifica(texto,n);
+return 0;
+}
