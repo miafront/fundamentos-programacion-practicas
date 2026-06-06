@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string subcadena(string texto,int p,int n){
+return texto.substr(p,n);
+}
+int main(){
+string texto;
+int p,n;
+cin>>texto;
+cin>>p;
+cin>>n;
+cout<<subcadena(texto,p,n);
+return 0;
+}
