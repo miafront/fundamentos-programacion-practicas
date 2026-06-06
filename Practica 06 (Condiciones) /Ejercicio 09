@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main(){
+int op;
+float l,r,b,h;
+cout << "1.Cuadrado 2.Circulo 3.Triangulo\n";
+cin >> op;
+if(op == 1){
+cin >> l;
+cout << l*l;
+}
+else if(op == 2){
+cin >> r;
+cout << 3.1416*r*r;
+}
+else if(op == 3){
+cin >> b >> h;
+cout << (b*h)/2;
+}
+return 0;
+}
