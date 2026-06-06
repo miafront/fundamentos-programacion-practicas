@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+int h,q,p,s;
+float total;
+cin >> h >> q >> p >> s;
+total = h*3 + q*5 + p*2 + s*2.5;
+cout << total;
+return 0;
+}
