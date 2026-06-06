@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+int h1, m1, s1, h2, m2, s2;
+int t1, t2, dif;
+cout << "Ingrese primer horario (h m s): ";
+cin >> h1 >> m1 >> s1;
+cout << "Ingrese segundo horario (h m s): ";
+cin >> h2 >> m2 >> s2;
+t1 = h1*3600 + m1*60 + s1;
+t2 = h2*3600 + m2*60 + s2;
+dif = t2 - t1;
+int h = dif / 3600;
+dif %= 3600;
+int m = dif / 60;
+int s = dif % 60;
+cout << "Tiempo transcurrido: " << h << ":" << m << ":" << s;
+return 0;
+}
