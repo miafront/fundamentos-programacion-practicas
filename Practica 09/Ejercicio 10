@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+bool esvocal(char c){
+return c=='a' || c=='e' || c=='i' || c=='o' || c=='u';
+}
+int main(){
+string texto;
+int cont=0;
+getline(cin,texto);
+for(int i=0;i<texto.length()-1;i++){
+if(esVocal(texto.at(i)) && esVocal(texto.at(i+1))){
+cout<<texto.substr(i,2)<<endl;
+cont++;
+}
+}
+cout<<"Cantidad: "<<cont;
+return 0;
+}
