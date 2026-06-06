@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main(){
+float p1,p2,practico,final,nf;
+int faltas;
+char op;
+do{
+cin >> p1 >> p2 >> practico >> final >> faltas;
+if(faltas > 9)
+final = 0;
+nf = p1*0.2 + p2*0.2 + practico*0.2 + final*0.4;
+cout << nf << endl;
+if(nf >= 51)
+cout << "APROBADO\n";
+else
+cout << "REPROBADO\n";
+cin >> op;
+}while(op == 's');
+return 0;
+}
