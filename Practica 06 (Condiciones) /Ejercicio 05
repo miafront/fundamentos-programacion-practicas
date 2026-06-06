@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+int dia, mes;
+cin >> dia >> mes;
+if ((mes == 9 && dia >= 21) || mes == 10 || mes == 11 || (mes == 12 && dia < 21))
+cout << "Primavera";
+else if ((mes == 12 && dia >= 21) || mes == 1 || mes == 2 || (mes == 3 && dia < 21))
+cout << "Verano";
+else if ((mes == 3 && dia >= 21) || mes == 4 || mes == 5 || (mes == 6 && dia < 21))
+cout << "Otono";
+else
+cout << "Invierno";
+    return 0;
+}
