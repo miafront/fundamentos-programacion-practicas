@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+string invertir(string texto){
+string invertida="";
+for(int i=texto.length()-1;i>=0;i--)
+invertida+=texto[i];
+return invertida;
+}
+int main(){
+string texto;
+getline(cin,texto);
+cout<<invertir(texto);
+return 0;
+}
